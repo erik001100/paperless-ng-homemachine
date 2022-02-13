@@ -43,6 +43,6 @@ Cheapest solution is a home NAS and save backups there...
   - [To backup or not to backup](https://pragmatic-architect.com/sysadmin/2021/04/05/backup.html)
   - [Duplicity to S3 Glacier Guide](https://github.com/senorkrabs/duplicity-glacier-guide)
   - [Quick EC2 Backups with Duplicity](https://rich0gentoo.wordpress.com/2014/02/04/quick-ec2-backups-with-duplicity/)
- 
+  - [Duplicity HowTo](https://www.rsync.net/resources/howto/duplicity.html) 
 - Drop ftpd server. Get a better document scanner with OpenSSH SFTP.
 - NGINX reverse proxy? 
