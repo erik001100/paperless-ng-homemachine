@@ -1,0 +1,31 @@
+# Notes for testing backups
+
+
+# SETUP
+sudo mkdir -p /data/documents/paperless/pureftpd/passwd
+sudo mkdir -p /data/documents/paperless/consume
+sudo mkdir -p /data/documents/paperless/data
+sudo mkdir -p /data/documents/paperless/export
+sudo mkdir -p /data/documents/paperless/media
+sudo mkdir -p /data/documents/paperless/pgdata
+sudo chown -R username:groupname /data/documents
+sudo chmod -R 755 /data/documents
+
+# DEPLOY
+# - Copy this file as 'docker-compose.yml' and the files 'docker-compose.env'
+#   and '.env' into a folder.
+# - Run 'docker-compose pull'.
+# - Run 'docker-compose run --rm webserver createsuperuser' to create a user.
+# - Run 'docker-compose up -d'.
+
+
+# CLEANUP
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker container prune -f
+docker volume prune -f
+docker network prune -f
+sudo rm -rf /data/documents/
+
+
+
